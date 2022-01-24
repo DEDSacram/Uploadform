@@ -48,14 +48,13 @@ if ($uploadOk == 0) {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
     if($video){
       echo '<video width="320" height="240" controls>
-      <source src='.$_FILES["fileToUpload"]["name"].' type="video/mp4">
-      <source src='.$_FILES["fileToUpload"]["name"].' type="video/ogg">
+      <source src='.$_FILES["fileToUpload"]["name"].'>
     </video>';
     }
     else if ($audio){
       echo '<audio controls>
-      <source src='.$_FILES["fileToUpload"]["name"].' type="audio/ogg">
-      <source src='.$_FILES["fileToUpload"]["name"].' type="audio/mpeg">
+      <source src='.$_FILES["fileToUpload"]["name"].'>
+ 
     </audio>';
       
     }
